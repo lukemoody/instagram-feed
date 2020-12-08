@@ -1,5 +1,7 @@
 # instagram-feed
 
+Basic Instagram API feed.
+
 ## You will need
 
 * A Facebook Developer Account.
