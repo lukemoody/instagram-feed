@@ -60,6 +60,19 @@ const instagramGraphApi = () => {
           </li>
           `;
         }
+        
+         // Check if media_type is CAROUSEL_ALBUM  to return correct src
+        if (mediaData.data.data[i].media_type == 'CAROUSEL_ALBUM') {
+          img = `
+          <li>
+            <a href="${mediaData.data.data[i].permalink}" target="_blank">
+              <div class="mask">
+                <img src="${mediaData.data.data[i].media_url}"/>
+              </div>
+            </a>
+          </li>
+          `;
+        }
 
         imgArr.push(img);
       }
