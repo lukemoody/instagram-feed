@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // TODO: Setup Facebook App and configure => https://developers.facebook.com/docs/instagram-basic-display-api/getting-started
-const instagramGraphApi = () => {
+const instagramAPI = () => {
 
   // API variables
   const apiRoute = 'https://graph.instagram.com/';
@@ -82,4 +82,4 @@ const instagramGraphApi = () => {
 
 }
 
-export default instagramGraphApi;
+export default instagramAPI;
