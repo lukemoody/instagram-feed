@@ -1,0 +1,96 @@
+.instagram-feed {
+  background: #CCD7E8;
+
+  h2 {
+    font-size: 72px;
+    line-height: 60px;
+    color: $c--brand;
+    margin-bottom: 50px;
+
+    @include smw {
+      text-align: center;
+    }
+  }
+
+  &__wave {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    margin-bottom: -100px;
+    z-index: 0;
+
+    @include md {
+      top: -80px;
+    }
+
+    @include smw {
+      top: -20px;
+      margin-bottom: 0;
+      z-index: -1;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#instagram {
+  display: inline-block;
+  overflow: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  @include smw {
+    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  li {
+    position: relative;
+    width: 25%;
+    padding-bottom: 25%;
+    padding-left: 12px;
+    padding-right: 12px;
+    float: left;
+    list-style-type: none;
+    border: 0;
+
+    @include smw {
+      width: 85%;
+      display: inline-block;
+      float: none;
+    }
+
+    a {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    .mask {
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform .35s ease-in-out;
+
+      &:hover {
+        transform: scale(.94);
+      }
+    }
+
+    img {
+      // position: absolute;
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
+  }
+}
